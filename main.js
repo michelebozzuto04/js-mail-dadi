@@ -63,5 +63,4 @@ if (userNumber > computerNumber) {
     console.log("Hai perso :(");
 } else {
     console.log("Hai pareggiato!");
-
 }
