@@ -1,11 +1,8 @@
 /* Mail
-Crea una lista di email di invitati ad una festa. Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo, utilizzando un ciclo for. Non è consentito usare nessun metodo proprio degli array(come includes, per esempio). Si può fare? Certo che si basta ragionare un po’. 
+Crea una lista di email di invitati ad una festa. Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo, utilizzando un ciclo for. Non è consentito usare nessun metodo proprio degli array(come includes, per esempio). Si può fare? Certo che si basta ragionare un po’.
 Nota: Non è necessario provvedere alla validazione delle email
-Gioco dei dadi
-Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.Stabilire il vincitore, in base a chi fa il punteggio più alto.
-Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte ? Se dobbiamo confrontare qualcosa che "cosa" ci serve ? */
 
-// Creiamo una variabile per memorizzare un array che conterrà la lista degli invitati.
+/* // Creiamo una variabile per memorizzare un array che conterrà la lista degli invitati.
 let invitati = [
     "giulia.rossi92@example.com",
     "marco_bianchi@testmail.net",
@@ -36,8 +33,8 @@ for (let i = 0; i < invitati.length; i++) {
         break;
     } else {
         // Altrimenti assegniamo false.
-        isInvited = false;
-    }
+    isInvited = false;
+}
 }
 
 // Creiamo un condizione che restituisca un messaggio in output in base al valore di isInvited.
@@ -45,4 +42,26 @@ if (isInvited) {
     console.log("Sei nella lista degli invitati!");
 } else {
     console.log("Purtroppo non sei nella lista degli invitati");
+} */
+
+
+/* Gioco dei dadi
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
+
+// Creiamo una variabile per memorizzare il numero generato per l'utente e per il computer.
+const userNumber = Math.floor(Math.random() * 7);
+const computerNumber = Math.floor(Math.random() * 7);
+
+console.log("Il tuo numero è:", userNumber);
+console.log("Il numero del computer è:", computerNumber);
+
+// Controlliamo quale dei due numeri generati è il più grande.
+if (userNumber > computerNumber) {
+    console.log("Hai vinto :)");
+} else if (computerNumber > userNumber) {
+    console.log("Hai perso :(");
+} else {
+    console.log("Hai pareggiato!");
+
 }
